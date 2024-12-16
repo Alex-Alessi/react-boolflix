@@ -1,7 +1,9 @@
 import React from "react";
 
-// layout
-import DefaultLayout from "./layouts/DefaultLayout";
+import { AppProvider } from "./contexts/CountContext";
+
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
 
 function App() {}
 

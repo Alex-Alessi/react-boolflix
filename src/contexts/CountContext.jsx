@@ -1,5 +1,22 @@
 import { createContext } from "react";
 
-const CountContext = createContext();
+export const AppContext = createContext();
 
-export default CountContext;
+export const AppProvider = ({ children }) => {
+  const [movies, setMovies] = useState([]);
+  const [series, setSeries] = useState([]);
+  const [selectedGenre, setSelectedGenre] = useState("");
+
+  return (
+    <AppContext.Provider
+      val={{
+        movies,
+        series,
+        selectedGenre,
+        setSelectedGenre,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
+};
