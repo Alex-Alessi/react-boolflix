@@ -1,1 +1,13 @@
+.container {
+  background-color: black;
+}
 
+.navbar {
+  height: 100px;
+  width: 100%;
+  display: flex;
+}
+
+.navbar h1 {
+  color: red;
+}
