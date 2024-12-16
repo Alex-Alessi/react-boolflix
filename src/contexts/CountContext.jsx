@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export const AppContext = createContext();
 
@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      val={{
+      value={{
         movies,
         series,
         selectedGenre,
