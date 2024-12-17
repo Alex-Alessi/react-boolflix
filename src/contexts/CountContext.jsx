@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-console.log("CountContext caricato correttamente");
+// console.log("CountContext caricato correttamente");
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {

@@ -21,13 +21,16 @@
 main .Container {
   background-color: gray;
   display: flex;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 
 .card-miniature {
   margin-top: 50px;
   background-color: black;
-  height: 300px;
-  width: auto;
-  margin-inline-start: 20px;
+  height: 500px;
+  width: 350px;
+  margin-left: 50px;
+  margin-top: 35px;
 }

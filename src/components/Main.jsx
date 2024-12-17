@@ -8,7 +8,7 @@ export default function Main() {
       <div className="Container">
         {movies.map((movie) => (
           <div key={movie.id} className="card-miniature">
-            <h3>{movie.original_title}</h3>
+            <image>{movie.poster_path}</image>
           </div>
         ))}
       </div>
