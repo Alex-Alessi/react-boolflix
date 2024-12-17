@@ -7,11 +7,14 @@ export default function Main() {
   return (
     <main>
       <div className="Container">
-        {movies.map((movie) => (
-          <div key={movie.id} className="card-miniature">
-            <img src={`${url_img}${movie.poster_path}`} />
-          </div>
-        ))}
+        {movies.map(
+          (movie) =>
+            movie.poster_path && (
+              <div key={movie.id} className="card-miniature">
+                <img src={`${url_img}${movie.poster_path}`} />
+              </div>
+            )
+        )}
       </div>
     </main>
   );
