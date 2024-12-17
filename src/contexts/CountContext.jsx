@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-
+console.log("CountContext caricato correttamente");
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
@@ -18,24 +18,27 @@ export const AppProvider = ({ children }) => {
       headers,
     };
 
-    fetch(`${apiUrl}/search/movie?query=${term}`, fetchConfig)
+    fetch(`${apiUrl}?query=${term}`, fetchConfig)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         setMovies(data.results);
       });
   };
 
-  const [globalData, setGlobalData] = useState({
-    movies,
-    setMovies,
-    series,
-    setSeries,
-    selectedGenre,
-    setSelectedGenre,
-    fetchMovies,
-  });
-
   return (
-    <AppContext.Provider value={globalData}>{children}</AppContext.Provider>
+    <AppContext.Provider
+      value={{
+        movies,
+        setMovies,
+        series,
+        setSeries,
+        selectedGenre,
+        setSelectedGenre,
+        fetchMovies,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
   );
 };

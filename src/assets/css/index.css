@@ -1,3 +1,4 @@
+/*# NAVBAR #*/
 .Container {
   background-color: black;
 }
@@ -14,4 +15,9 @@
 
 .search-bar {
   margin-right: 10px;
+}
+
+/*# MAIN #*/
+main .Container {
+  background-color: gray;
 }

@@ -1,10 +1,9 @@
-import { NavLink } from "react-router-dom";
 import { AppContext } from "../contexts/CountContext";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 export default function Navbar() {
   const [inputValue, setInputValue] = useState("");
-  const [searchResult, setSearchResult] = useState([]);
+  const { fetchMovies } = useContext(AppContext);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -15,6 +14,8 @@ export default function Navbar() {
       alert("Inserisci il nome di un film o serie TV");
       return;
     }
+
+    fetchMovies(inputValue);
   };
 
   return (
