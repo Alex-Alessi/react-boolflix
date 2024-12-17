@@ -4,13 +4,17 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [inputValue, setInputValue] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
   const handleSearch = () => {
-    console.log(inputValue);
+    if (!inputValue) {
+      alert("Inserisci il nome di un film o serie TV");
+      return;
+    }
   };
 
   return (
