@@ -20,4 +20,14 @@
 /*# MAIN #*/
 main .Container {
   background-color: gray;
+  display: flex;
+  overflow-x: auto;
+}
+
+.card-miniature {
+  margin-top: 50px;
+  background-color: black;
+  height: 300px;
+  width: auto;
+  margin-inline-start: 20px;
 }

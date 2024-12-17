@@ -7,7 +7,7 @@ export default function Main() {
     <main>
       <div className="Container">
         {movies.map((movie) => (
-          <div key={movie.id} className="card">
+          <div key={movie.id} className="card-miniature">
             <h3>{movie.original_title}</h3>
           </div>
         ))}
