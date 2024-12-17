@@ -2,8 +2,8 @@ import { AppContext } from "../contexts/CountContext";
 import { useState, useContext } from "react";
 
 export default function Navbar() {
-  const [inputValue, setInputValue] = useState("");
-  const { fetchMovies } = useContext(AppContext);
+  const { fetchMovies, fetchSeries, inputValue, setInputValue } =
+    useContext(AppContext);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -16,6 +16,7 @@ export default function Navbar() {
     }
 
     fetchMovies(inputValue);
+    fetchSeries(inputValue);
   };
 
   return (

@@ -6,6 +6,7 @@ export const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const apiUrl = "https://api.themoviedb.org/3/search/movie";
   const apiUrlSeries =
     "https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=it_IT&query=scrubs";
@@ -51,6 +52,9 @@ export const AppProvider = ({ children }) => {
         selectedGenre,
         setSelectedGenre,
         fetchMovies,
+        fetchSeries,
+        inputValue,
+        setInputValue,
       }}
     >
       {children}
